@@ -59,17 +59,17 @@ const data = [
 // 1 Imprima no console a quantidade de pessoas Total.
 
 let quantidadePessoas = data.length;
-console.log("Quantidade de pessoas ",quantidadePessoas);
+console.log("Quantidade de pessoas ", quantidadePessoas);
 
 // 2 Imprima no console a quantidade de pessoas pessoas do sexo Feminino.
 
 let filtroFeminino = data.filter((pessoas) => pessoas.sexo == "F").length;
-console.log("Quantidade de pessoas do sexo feminino ",filtroFeminino);
+console.log("Quantidade de pessoas do sexo feminino ", filtroFeminino);
 
 // 3 Imprima no console a soma do salário de todas as pessoas.
 
 let somaSalarios = data.reduce((acc, curr) => acc + curr.salario, 0);
-console.log("Soma do salario de todas as pessoas ",somaSalarios);
+console.log("Soma do salario de todas as pessoas ", somaSalarios);
 
 // 4 Imprima no console a média do salário de todas as pessoas.
 
@@ -79,27 +79,39 @@ console.log((somaSalarios / quantidadePessoas).toFixed(2));
 let SomaSalarioMasculino = data
   .filter((pessoas) => pessoas.sexo == "M")
   .reduce((acc, curr) => acc + curr.salario, 0);
-console.log("Soma salario masculino",SomaSalarioMasculino);
+console.log("Soma salario masculino", SomaSalarioMasculino);
 
 // 6 Imprima no console a média do salário de todas as pessoas do sexo Masculino
 let filtroMasculino = data.filter((pessoas) => pessoas.sexo == "M").length;
-console.log("Media salario masculino",(SomaSalarioMasculino / filtroMasculino).toFixed(2));
+console.log(
+  "Media salario masculino",
+  (SomaSalarioMasculino / filtroMasculino).toFixed(2)
+);
 
 // 7 Utilize a função Some, para descobrir se existe algum salário
 // superior a R$ 7.000, imprima verdadeiro no console caso exista, caso
 // contrário falso.
 
 let salarioMaior = data.some((salario) => salario.salario > 7000);
-console.log("Salarios superior a 7000",salarioMaior);
+console.log("Salarios superior a 7000", salarioMaior);
 
 // 8 Utilize a função findIndex, para descobrir a posição da pessoa de nome 'Eva Trindade'.
 
-console.log("Posiçao do nome Eva Trindade ",data.findIndex((pessoa) => pessoa.nome == "Eva Trindade"));
+console.log(
+  "Posiçao do nome Eva Trindade ",
+  data.findIndex((pessoa) => pessoa.nome == "Eva Trindade")
+);
 
 // 9 Utilize a função filter, para filtrar todas pessoas que o nome possua o sobrenome "Silva".
 
-console.log("Pessoas com o nome SILVA",data.filter((pessoas) => pessoas.nome.includes("Silva")));
+console.log(
+  "Pessoas com o nome SILVA",
+  data.filter((pessoas) => pessoas.nome.includes("Silva"))
+);
 
 // 10 Imprima os nomes utilizando o MAP
 
-console.log("TODOS OS NOMES",data.map((pessoas) => pessoas.nome));
+console.log(
+  "TODOS OS NOMES",
+  data.map((pessoas) => pessoas.nome)
+);
