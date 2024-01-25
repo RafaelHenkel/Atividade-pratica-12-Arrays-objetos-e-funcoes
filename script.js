@@ -115,3 +115,8 @@ console.log(
   "TODOS OS NOMES",
   data.map((pessoas) => pessoas.nome)
 );
+<<<<<<< Updated upstream
+=======
+
+console.log("testar PR");
+>>>>>>> Stashed changes
